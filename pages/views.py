@@ -35,7 +35,7 @@ def about(request):
 
     contex = {
         'brokers':brokers,
-        'mvp_brokers':brokers,
+        'mvp_brokers':mvp_brokers,
     }
 
     #return
