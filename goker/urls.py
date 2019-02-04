@@ -9,6 +9,8 @@ urlpatterns = [
     path('', include('pages.urls')),
      # path to pages urls
     path('listings/', include('listings.urls')),
+
+    path('accounts/', include('accounts.urls')),
     # path to admin urls 
     path('admin/', admin.site.urls),
 # Import media form static floder 

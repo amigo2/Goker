@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from listings.choices import bedroom_choices, price_choices, state_choices
 
 from listings.models import Listing
 from brokers.models import Broker
@@ -18,17 +19,21 @@ def index(request):
 
     # define a key pair var
     context={
-        'listings' : paged_listing
+        'listings'        : paged_listing,
+        'bedroom_choices' : bedroom_choices,
+        'price_choices'   : price_choices,
+        'state_choices'   : state_choices
+
 
     }
 
     #connected to the template index.html
     return render(request, 'pages/index.html', context)
 
-
+  
 def about(request):
     #connected to the template about.html
-    brokers = Broker.objects.order_by('hire_date')
+    brokers = Broker.objects.order_by('-hire_date')
 
     #get MVP
     mvp_brokers = Broker.objects.all().filter(is_mvp=True)

@@ -4,31 +4,59 @@
 
 {%  block content %}
 
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active"> About</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+<section class="jumbotron text-center">
+    <div class="container-fluid text-center">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="first-slide" src="{% static 'img/setas.jpg' %}" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption text-center">
+            <h1 class="text-primary">PROFESIONALIDAD Y EFICACIA</h1>
+              <p>Nos movemos como pez en el agua en el mercado inmobiliario. Por ello te financiamos hasta el 100% de tu nueva casa. </p>
+            <p><a class="btn btn-lg btn-primary" href="contacto.php" role="button">CONTACTAR</a></p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+ </div>
+</section>
+
+
+
 <section id="showcase-inner" class="py-5 text-white">
         <div class="container">
           <div class="row text-center">
             <div class="col-md-12">
-              <h1 class="display-4">About BT Real Estate</h1>
+              <h1 class="display-4">Somos Best Inmobiliaria </h1>
               <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
             </div>
           </div>
         </div>
       </section>
     
-      <!-- Breadcrumb -->
-      <section id="bc" class="mt-3">
-        <div class="container">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="index.html">
-                  <i class="fas fa-home"></i> Home</a>
-              </li>
-              <li class="breadcrumb-item active"> About</li>
-            </ol>
-          </nav>
-        </div>
-      </section>
+
     
       <section id="about" class="py-4">
         <div class="container">
@@ -45,7 +73,7 @@
               {% if mvp_brokers %}
                 {% for broker in mvp_brokers %}
                   <div class="card">
-                    <img class="card-img-top" src="{{ broker.photo.url }}" alt="Seller of the month">
+                    <img class="card-img-top" src="{{ listing.broker.photo.url }}" alt="Seller of the month">
                     <div class="card-body">
                       <h5 class="card-title">Empleado del Mes</h5>
                       <h6 class="text-secondary">{{ broker.name }}</h6>
