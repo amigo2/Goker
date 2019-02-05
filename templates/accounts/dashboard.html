@@ -33,19 +33,21 @@
             </thead>
             <tbody>
               <tr>
-                <td>22</td>
-                <td>45 Drivewood Circle</td>
-                <td>
-                  <a class="btn btn-light" href="#">View Listing</a>
-                </td>
+                {% if listings %}
+                  {% for listing in listings %}
+                    <td>"{ listing.title }"</td>
+                    <td>45 Drivewood Circle</td>
+                    <td>
+                      <a class="btn btn-light" href="#">View Listing</a>
+                    </td>
+                    {% endfor %}
+                    {% else %}
+                    <div class= "col-md-12">
+                      <p>No listings Availabble</p>
+                    </div>
+                  {% endif %}
               </tr>
-              <tr>
-                <td>43</td>
-                <td>22 Westbrook rd</td>
-                <td>
-                  <a class="btn btn-light" href="#">View Listing</a>
-                </td>
-              </tr>
+             
               <tr>
                 <td>31</td>
                 <td>12 Samson Ave</td>
