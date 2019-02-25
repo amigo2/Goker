@@ -25,7 +25,7 @@
                 <a href="{%  url 'index' %}">Home</a>
               </li>
               <li class="breadcrumb-item">
-                <a href="{%  url 'listings' %}">Listings</a>
+                <a href="{%  url 'listings' %}">Listado</a>
               </li>
               <li class="breadcrumb-item active">{{ listing.title }}</li>
             </ol>
@@ -36,7 +36,7 @@
       <!-- Listing -->
       <section id="listing" class="py-4">
         <div class="container">
-          <a href="{%  url 'listings' %}" class="btn btn-light mb-4">Atras, vuelta al listado</a>
+          <a href="{%  url 'listings' %}" class="btn btn-light mb-4">Volver al listado</a>
           <div class="row">
             <div class="col-md-9">
               <!-- Home Main Image -->
@@ -86,10 +86,10 @@
                 </div>
                     {% endif %}
               </div>
-              <!-- Video 16:9 aspect ratio -->
+              <!-- Video 16:9 aspect ratio 
                 <div class="embed-responsive embed-responsive-16by9">
                   <iframe class="embed-responsive-item" src="{{ listing.video.url }}"></iframe>
-                </div>
+                </div>-->
               <!-- Fields -->
               <div class="row mb-5 fields">
                 <div class="col-md-6">

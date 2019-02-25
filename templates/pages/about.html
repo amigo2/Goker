@@ -19,7 +19,7 @@
     </div>
   </section>
 
-<section class="jumbotron text-center">
+<!--<section class="jumbotron text-center">
     <div class="container-fluid text-center">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -41,7 +41,7 @@
         </div>
       </div>
  </div>
-</section>
+</section>-->
 
 
 
@@ -73,7 +73,7 @@
               {% if mvp_brokers %}
                 {% for broker in mvp_brokers %}
                   <div class="card">
-                    <img class="card-img-top" src="{{ listing.broker.photo.url }}" alt="Seller of the month">
+                    <img class="card-img-top" src="{{ broker.photo.url }}" alt="Seller of the month">
                     <div class="card-body">
                       <h5 class="card-title">Empleado del Mes</h5>
                       <h6 class="text-secondary">{{ broker.name }}</h6>
@@ -93,7 +93,7 @@
     
       <!-- Work -->
       <section id="work" class="bg-dark text-white text-center">
-        <h2 class="display-4">We Work For You</h2>
+        <h2 class="display-4">Trabajamos para ti</h2>
         <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
         <hr>
         <a href="listings.html" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
