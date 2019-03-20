@@ -14,7 +14,7 @@ urlpatterns = [
     # path to pages comtacst
     path('contacts/', include('contacts.urls')),
     # path to spyder
-    path('spyder/', include('spyder.urls')),
+    #path('spyder/', include('spyder.urls')),
     # path to admin urls 
     path('admin/', admin.site.urls),
 # Import media form static floder 

@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'brokers.apps.BrokersConfig',
     'accounts.apps.AccountsConfig',
     'contacts.apps.ContactsConfig',
-    'spyder.apps.SpyderConfig',
+    #'spyder.apps.SpyderConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
