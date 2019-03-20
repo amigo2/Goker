@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{%  block content %}
+
+<div class="jumbotron text-center">
+        <h1 class="display-4">TODO</h1>
+        <p class="lead">search bar</p>
+        <p class="lead">add to var fotocasa_url</p>
+        <p class="lead">later implememt for real search engine</p>
+
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+  
+
+<div class= "container text-center" >
+    <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card listing-preview">
+          <img class="card-img-top" src= listing.photo_main.url alt="">
+          <div class="card-img-overlay">
+            <h2>
+              <span class="badge badge-secondary text-white"> listing.price | intcomma €</span>
+            </h2>
+          </div>
+          <div class="card-body">
+            <div class="listing-heading text-center">
+              <h4 class="text-primary"> listing.title </h4>
+              <p>
+                <i class="fas fa-map-marker text-secondary"></i>  listing.city ,  listing.state ,  listing.zipcode </p>
+            </div>
+            <hr>
+            <div class="row py-2 text-secondary">
+              <div class="col-6">
+                <i class="fas fa-th-large"></i> metros:  listing.mtrs mts</div>
+              <div class="col-6">
+                <i class="fas fa-car"></i> Garage:  listing.garage </div>
+            </div>
+            <div class="row py-2 text-secondary">
+              <div class="col-6">
+                <i class="fas fa-bed"></i>  listings.bedrooms </div>
+              <div class="col-6">
+                <i class="fas fa-bath"></i>  listings.bathrooms </div>
+            </div>
+            <hr>
+            <div class="row py-2 text-secondary">
+              <div class="col-6">
+                <i class="fas fa-user"></i> listings.broker </div>
+            </div>
+            <div class="row text-secondary pb-2">
+              <div class="col-6">
+                <i class="fas fa-clock"></i>  listings.list_date | timesince </div>
+            </div>
+            <hr>
+            <a href= url 'listing' listing.id  class="btn btn-primary btn-block">More Info</a>
+          </div>
+        </div>
+      </div>
+ 
+<div class="re-Searchresult-itemRow">
+        <div class="re-Card">
+            <div class="sui-CardComposable sui-CardComposable--landscape">
+                <div class="sui-CardComposable-primary">
+                    <div class="re-Card-primary">
+                        <div class="re-Card-fav"><div><svg class="fc-Icon fc-Icon--s re-SharedAddToFavs-icon" viewbox="0 0 32 32"></svg></div>
+                        <div class="re-SharedAddToFavs-modal"></div></div>
+                        <a class="re-CardImage-link" href="/vivienda/sevilla-capital/aire-acondicionado-ascensor-patio-parking-piscina-avenida-emilio-lemos-149971031?RowGrid=1&amp;tti=1&amp;opi=300">
+                            <div class="re-Card-photosCounter"><svg class="re-Icon" height="16px" viewbox="0 0 16 16" width="16px"><polygon points="0.5 4 5 4 6 2.5 10 2.5 11 4 15.5 4 15.5 13 0.5 13"></polygon>
+                                <circle cx="8" cy="8" r="2.5"></circle></svg>1/16</div>
+                                <div class="react-Slidy"></div></a><div class="re-Card-labels"></div></div></div>
+                                <div class="sui-CardComposable-secondary">
+                                    <div class="re-Card-secondary">
+                                        <a class="re-Card-link" href="/vivienda/sevilla-capital/aire-acondicionado-ascensor-patio-parking-piscina-avenida-emilio-lemos-149971031?RowGrid=1&amp;tti=1&amp;opi=300">
+                                            <div class="re-Card-wrapperTitle">
+                                                <div class="re-Card-bumpdate">
+                                                    <span class="re-Card-timeago">ahora</span></div>
+                                                    <div class="re-Card-meta">
+                                                        <h3 class="re-Card-title">Piso en Avenida Emilio Lemos,  Sevilla Capital</h3></div></div>
+                                                        <div class="re-Card-priceContainer">
+                                                            <div class="re-Card-priceComposite">
+                                                                <span class="re-Card-price"><span>155.000 €</span></span></div></div>
+                                                                <div class="re-Card-wrapperFeatures">
+                                                                    <span class="re-Card-feature">4 habs.</span>
+                                                                    <span class="re-Card-feature">100 m²</span></div>
+                                                                    <span class="re-Card-description">Estupendo piso en régimen de V. P. O en Avda. de Emilio Lemos, 
+                                                                        consta de 100 m2 construidos y útil 90 m2 distribuidos en cocina amueblada...</span></a>
+                                                                        <div class="re-Card-contact">
+                                                                            <a class="sui-AtomButton sui-AtomButton--tertiary sui-AtomButton--large sui-AtomButton--link" href="tel:954309382">
+                                                                                <span class="sui-AtomButton-inner">
+                                                                                    <span class="sui-AtomButton-leftIcon">
+                                                                                        <svg class="fc-Icon fc-Icon--s" viewbox="0 0 24 24"></svg></span>
+                                                                                        <span class="sui-AtomButton-text">954309382</span></span></a><div class="re-Card-contactButton">
+                                                                                            <button class="sui-AtomButton sui-AtomButton--tertiary sui-AtomButton--large">
+                                                                                                <span class="sui-AtomButton-inner">
+                                                                                                    <span class="sui-AtomButton-leftIcon">
+                                                                                                        <svg class="fc-Icon fc-Icon--s" viewbox="0 0 24 24"></svg></span>
+                                                                                                        <span class="sui-AtomButton-text">Contactar</span></span></button>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div></div></div></div></div>
+          </div>
+
+        </div>
+
+                                                                                            {% endblock %}

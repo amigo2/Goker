@@ -7,6 +7,11 @@ from listings.models import Listing
 from brokers.models import Broker
 
 
+from urllib.request import urlopen as uReq
+from bs4 import BeautifulSoup as soup 
+
+
+
 def index(request):
     # gather all ojects in listings
     listings = Listing.objects.order_by('-list_date').filter(is_published=True)
@@ -45,3 +50,25 @@ def about(request):
 
     #return
     return render(request, 'pages/about.html', contex)
+
+def spyder(request):
+
+    my_url = 'https://www.newegg.com/Video-Cards-Video-Devices/Category/ID-38?Tpk=graphic%20cards'
+
+    uClient   = uReq(my_url)
+    page_html = uClient.read()
+    uClient.close()
+
+    page_soup = soup(page_html, "html.parser")
+
+    containers = page_soup.find_all("div", {"class":"item-container"})
+
+    context = {
+
+    }
+
+    
+    
+
+    return render(request, 'pages/spyder.html', context)
+
