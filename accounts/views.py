@@ -1,15 +1,23 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
+from django.views import generic
+from django.urls import reverse_lazy
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from listings.models import Listing
+#from  . forms import listing_form
+
+
+
 
 def register(request):
      # Register User
     if request.method == 'POST':
-     first_name = request.POST['first_name']
-     last_name  = request.POST['last_name']
-     username   = request.POST['username']
-     email      = request.POST['email']
-     password   = request.POST['password']
+     first_name  = request.POST['first_name']
+     last_name   = request.POST['last_name']
+     username    = request.POST['username']
+     email       = request.POST['email']
+     password    = request.POST['password']
      password2   = request.POST['password2']
 
      if password == password2:
@@ -61,5 +69,48 @@ def logout(request):
 
 
 def dashboard(request):
-    return render(request, 'accounts/dashboard.html')
+
+     # gather all ojects in listings
+     listings = Listing.objects.order_by('-list_date')
+     contex={
+
+          'listings' : listings
+
+     }
+
+     return render(request, 'accounts/dashboard.html', contex)
+
+
+class AdminListView(generic.ListView):
+     template_name = 'accounts/admin_listings.html'
+     def get_queryset(self):
+          return Listing.objects.all()
+
+
+class DetailListView(generic.DetailView):
+     model = Listing
+     template_name = 'accounts/admin_listing.html'
+
+
+class ListingCreate(CreateView):
+     model = Listing
+     fields = [  'broker', 'reference', 'title', 'address', 'city', 'state', 'zipcode', 'description', 'price', 'bedrooms', 'bathrooms', 
+     'garage', 'mtrs', 'lot_size', 'photo_main', 'photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6']
+     template_name = 'accounts/listing_form.html'
+
+     #def success redirect
+    #success_url = reverse_lazy('accounts/admin_listing.html')
+
+class ListingDelete(DeleteView):
+     model = Listing
+     #success_url = reverse_lazy('listing:index', pk= property_id)
+     #success_url = reverse_lazy('accounts/admin_listings.html')
+
+class ListingUpdate(UpdateView):
+     model = Listing
+     fields = [  'broker', 'reference', 'title', 'address', 'city', 'state', 'zipcode', 'description', 'price', 'bedrooms', 'bathrooms', 
+     'garage', 'mtrs', 'lot_size', 'photo_main', 'photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6']
+     
+     success_url = reverse_lazy('accounts/admin_listing.html')
+     
 

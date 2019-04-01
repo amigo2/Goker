@@ -17,46 +17,20 @@
     </div>
   </section>
 
+  <!-- Alerts-->
+       {% include 'partials/_alerts.html' %}
+
 <section id="dashboard" class="py-4">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Welcome</h2>
-          <p>Here are the property listings that you have inquired about</p>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Property</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                {% if listings %}
-                  {% for listing in listings %}
-                    <td>"{ listing.title }"</td>
-                    <td>45 Drivewood Circle</td>
-                    <td>
-                      <a class="btn btn-light" href="#">View Listing</a>
-                    </td>
-                    {% endfor %}
-                    {% else %}
-                    <div class= "col-md-12">
-                      <p>No listings Availabble</p>
-                    </div>
-                  {% endif %}
-              </tr>
-             
-              <tr>
-                <td>31</td>
-                <td>12 Samson Ave</td>
-                <td>
-                  <a class="btn btn-light" href="#">View Listing</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <h2>Bienvenid@</h2>
+          <p>Estas en tu Dash Board</p>
+          <a class="btn btn-primary" href="{% url 'admin_listings' %}">Admin Propiedades</a>
+          <a class="btn btn-primary" href="{% url 'admin_listings' %}">Admin Brokers</a>
+          <a class="btn btn-primary" href="{% url 'admin_listings' %}">Admin Users</a>
+          <table class="table"></table>
+
         </div>
       </div>
     </div>

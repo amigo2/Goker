@@ -18,7 +18,7 @@ def index(request):
 
     # pagination
     # max objevt per page
-    paginator = Paginator(listings,3)
+    paginator = Paginator(listings,6)
     page = request.GET.get('page')
     paged_listing = paginator.get_page(page)
 
@@ -64,11 +64,6 @@ def spyder(request):
     containers = page_soup.find_all("div", {"class":"item-container"})
 
     context = {
-
     }
-
-    
-    
-
     return render(request, 'pages/spyder.html', context)
 

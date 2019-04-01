@@ -13,7 +13,7 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
             <a href="{% url 'index' %}">
-              <i class="fas fa-home"></i> Home</a>
+              <i class="fas fa-home"></i> Home </a>
           </li>
           <li class="breadcrumb-item active"> About</li>
         </ol>
@@ -22,184 +22,117 @@
   </section>
 </head>
 
-<body>
-    <main role=main>
-      <section class="jumbotron text-center">
-           <div class="container-fluid text-center">
-
-    <!--<div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="first-slide" src="images/setas.jpg" alt="First slide">
-            <div class="container">
-              <div class="carousel-caption text-center">
-              <h1 class="text-primary">PROFESIONALIDAD Y EFICACIA</h1>
-                <p>Nos movemos como pez en el agua en el mercado inmobiliario. Por ello te financiamos hasta el 100% de tu nueva casa. </p>
-              <p><a class="btn btn-lg btn-primary" href="contacto.php" role="button">CONTACTAR</a></p>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-        </div>-->
-
-
-      </section>
-
-       <div class="container-fluid text-center">
-
-
-                 <div class="col-xl">
-
-                      <!--Call to action-->
-
-        <div class="alert alert-secondary" role="alert">
-            <h4 class="text-primary">CON NOSOTROS ENCONTRARÁS LA CASA QUE ESTÁS BUSCANDO</h4>
-            <p>Despues de muchos años de experiencia hemos vuelto para ser mejores ... mejores juntos.</p>
-            <hr>
-            <p class="mb-0">Confía en nuestra EXPERIENCIA y nuestro afán por INNOVAR.</p>
-        </div>
-
-           </div>
-        </div>
-
-     </main>
-
-        <div class="container">
-             <div class="col-xl">
-                 <hr>
-                 <h6 class="text-secondary">QUIENES SOMOS</h6>
-                 <hr>
-                 <p>BEST INMOBILIARIA  es una sociedad radicada en Sevilla en el barrio de La Macarena. Está dedicada a la intermediación inmobiliaria con una experiencia de más de 20 años. Aparece en el mercado inmobiliario con unas ideas nuevas y dinámicas, con la intención de sacar el máximo rendimiento a sus operaciones de venta, compra o alquiler de las propiedades en Sevilla.</p>
-                 <br>
-                 <p>Disponemos de una amplia gama de viviendas de 1ª y 2ª mano, parcelas, fincas, chalet, adosados, pisos, dúplex… repartidos por la provincia de Sevilla. Todo ello con las mejores garantías y financiación del mercado.</p>
-                 <hr>
-       </div>
+<section id="showcase-inner" class="py-5 text-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1 class="display-4">Best Inmobiliaria </h1>
+        <p class="lead">Nuevas maneras de hacer Inmobiliaria</p>
+      </div>
     </div>
-        <div class="container-fluid text-center">
-             <div class="col-xl">
-            <img src="images/puerta_banner.jpg" alt="responsive image" class="rounded" height="100%" width="100%" style="margin-top:40px;margin-bottom;20px">
+  </div>
+</section>
 
-              <div class="carousel-caption text-left">
-                <h1>Tu casa en buenas manos.</h1>
-                <p>Disponemos de una amplia gama de viviendas de 1ª y 2ª mano: Parcelas, fincas, chalets, adosados, pisos, dúplex, etc...repartidos por la provincia de Sevilla. Todo ello con las mejores garantías y financiación del mercado.</p>
-                <p><a class="btn btn-lg btn-primary" href="index.php" role="button">Buscar</a></p>
-              </div>
-        </div>
+
+
+<section id="about" class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h2>Visión</h2>
+        <p class="lead">Estamos aquí para cambiar las cosas!! Para bien claro..:)</p>
+        <img src="{% static 'img/about.jpg' %}" alt="">
+        <p class="mt-4">Somos una empresa joven y dinámica con grandes aspiraciones, donde todos tienen voz para tomar decisiones.
+          clink, clink , rima.
             <hr>
+            Nuestro principal objetivo es por supuesto la satisfacción del cliente. 
+            En que nos diferenciamos de los demás, principalmente en nuestra metodología de empresa.
+            <hr>
+
+            Gurus de la tecnología nuestro  
+            
+            mucho Facebook.
+            Somos una Start Up fundada hace 2 años. 
+
+              pasito a pasito  
+        </p>
+      </div>
+      <!--<div class="col-md-4">
+        {% if mvp_brokers %}
+          {% for broker in mvp_brokers %}
+            <div class="card">
+              <img class="card-img-top" src="{{ broker.photo.url }}" alt="Seller of the month">
+              <div class="card-body">
+                <h5 class="card-title">Empleado del Mes</h5>
+                <h6 class="text-secondary">{{ broker.name }}</h6>
+                <p class="card-text">{{ broker.description }}
+                </p>
+              </div>
+            </div>
+          {% endfor %}
+        {%endif %}-->
+
+
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Work -->
+<section id="work" class="bg-dark text-white text-center">
+  <h2 class="display-4">Trabajamos para ti</h2>
+  <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
+  <hr>
+  <h2 class="display-4">Trabaja con Nosotros</h2>
+  <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
+  <hr>
+  <a href="listings.html" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
+</section>
+
+<!-- Team -->
+<section id="team" class="py-5">
+  <div class="container">
+    <h2 class="text-center">Our Team</h2>
+    <div class="row text-center">
+       <!-- Django -->
+      {% if brokers %}
+        {% for broker in brokers %}
+
+        <!--<div class="col-md-4">
+            <img src="{{ broker.photo.url }}" alt="" class="rounded-circle mb-3">
+            <h4>{{ broker.name }}</h4>
+            <p class="text-success">
+              <i class="fas fa-award text-success mb-3"></i> Broker </p>
+            <hr>
+            <p>
+              <i class="fas fa-phone"></i> {{ broker.phone }}</p>
+            <p>
+              <i class="fas fa-envelope-open"></i>  {{ broker.email }}</p>
+          </div>-->
+          <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{ broker.photo.url }}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{ broker.name }}</h5>
+                <p class="text-success">
+                    <i class="fas fa-award text-success mb-3"></i> Broker </p>
+                  <hr>
+                  <p>
+                    <i class="fas fa-phone"></i> {{ broker.phone }}</p>
+                  <p>
+                    <i class="fas fa-envelope-open"></i>  {{ broker.email }}</p>
+              </div>
+            </div>
+
+        {% endfor %}
+      {% else %}
+        <div class="col-md-12">
+          <p> Busqueda sin resultados</p>
         </div>
-         <div class="container">
-             <div class="col-xl">
-                 <p>Contamos con un equipo profesional de agentes inmobiliarios especialistas e involucrados con un objetivo común, satisfacer las demandas de nuestros clientes, sin olvidar la trayectoria consolidada en el sector.</p>
-                 <br>
-                 <p>Las claves del éxito son la transparencia, nitidez, profesionalidad, eficiencia y eficacia; sin olvidar la capacidad de superación durante estos años de crisis, manteniéndose firme.</p>
-                 <br>
-                 <p>En BEST INMOBILIARIA, se dan dos pilares ineludibles: EXPERIENCIA e INNOVACIÓN, siempre con el fin de dar un servicio de calidad a nuestros clientes.</p>
-
-                 </div>
-                    <hr>
-             </div>
-             <div class="container-fluid">
-             <div class="col-xl">
-            <img src="images/roof_banner.jpg" alt="responsive image" class="rounded" height="100%" width="100%" style="margin-top:40px;margin-bottom;20px">
-
-                  <div class="carousel-caption text-right">
-                <h1 class="text">Experiencia e Innovación.</h1>
-                <p class="text">"Las claves del éxito son la transparencia, nitidez, profesionalidad, eficiencia y eficacia; sin olvidar la capacidad de superación durante estos años de crisis, manteniéndose firme".</p>
-
-                    <!-- Button trigger modal -->
-
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                       Visítanos!
-                      </button>
-
-                    <!-- Modal -->
-
-
-                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">
-
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12678.123568897858!2d-5.9839871!3d37.4009248!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfe6b82ce1f582605!2sBest+Inmobiliaria!5e0!3m2!1ses!2ses!4v1536360676927" width="100%" height="450" frameborder="0" style="border:2" allowfullscreen></iframe>
-
-                       </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <hr>
-         </div>
-
-         </div>
-
-            <div class="container">
-             <div class="col-xl">
-                 <h6 class="text-secondary">NUESTRA MISIÓN</h6>
-                 <hr>
-                 <P>En BEST INMOBILIARIA estamos a su servicio para que pueda comprar, vender o alquilar su vivienda con la mayor garantía del mercado.
-                    Tenemos como objetivo ser referencia del sector inmobiliario por CALIDAD, PROFESIONALIDAD Y ATENCIÓN PERSONALIZADA.</P>
-                </div>
-            </div>
-            <div class="container-fluid">
-
-             <div class="col-xl">
-            <img src="images/calidad.jpg" alt="responsive image" class="rounded" height="100%" width="100%" style="margin-top:40px;margin-bottom;20px">
-            </div>
-                <hr>
-            </div>
-                    <div class="container text-center">
-                    <div class="col"></div>
-                    <div class="col-auto"><p class="text-secondary">¿QUIERE COMPRAR O QUIERE VENDER?</p></div>
-                    <div class="col"><hr></div>
-                    </div>
-
-             <div class="container">
-             <div class="col-xl">
-
-                 <p class="text-primary">ALERTAS EN TIEMPO REAL</p>
-
-                     <p>Mediante nuestro software podemos enviarle en tiempo real vía teléfono móvil o correo electrónico, los inmuebles que se adapten a sus criterios (descripción, inmueble, localización, fotos, vídeos…).</p>
-                 <br>
-                   <p class="text-primary">VISITAS GUIADAS</p>
-
-                 <p>Visitas de los diferentes inmuebles que le puedan interesar acompañados por nuestros comerciales personalizados a cada cliente.</p>
-                 <br>
-                   <p class="text-primary">OBRAS Y ADAPTACIÓN</p>
-
-                 <p>Desde las primeras visitas podrá contar con un especialista en obras y diseños para poderle asesorar, caso de necesitar algún tipo de reforma.</p>
-                    <p class="text-primary">COMPRADORES ACTIVOS</p>
-
-                 <p>Contamos con una amplia cartera de compradores e inversores. Sólo necesitamos que nos deje mostrar su vivienda.</p>
-                    <p class="text-primary">VISTAS, VALORACIÓN Y PLAN COMERCIAL</p>
-
-                 <p>Valoración y estudio comparativo de su vivienda, respecto al mercado.<b></b>
-                     Plan de acción respecto a la comercialización de las mismas y consenso del mejor precio posible. Reportaje fotográfico – vídeo, home staging (prepare su casa para la venta), flyer exclusivos, visitas safari…</p>
-                 <p class="text-primary">WEB Y PORTALES INMOBILIARIOS</p>
-
-                   <p>Posicionamiento de su inmueble en la web y en los portales inmobiliarios, con revisión de los anuncios diariamente.</p>
-
-             </div>
-</div>
-                <hr>
-
-
-</body>
+      {% endif %}
+    </div>
+  </div>
+</section>
 
 
 {% endblock %}

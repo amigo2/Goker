@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'index' %}">
+                  <i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="breadcrumb-item active"> Dashboard</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+<!-- Alerts-->
+    {% include 'partials/_alerts.html' %}
+
+<section id="dashboard" class="py-4">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12">
+                <h2>Bienvenid@</h2>
+                <p>Lista de propiedades</p>
+                <a class="btn btn-primary" href="{% url 'listing_form' %}">Crear nueva propiedad</a>
+                <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Referencia</th>
+                    <th scope="col">Dirección</th>  
+                    <th scope="col">Población</th>                
+                    <th scope="col"> Precio </th>
+                    <th scope="col">Metros</th>
+                    <th scope="col">Dormitorios</th>
+                    <th scope="col">Baños</th>
+                    <th scope="col">Publicado</th>
+                    <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+        {% if object_list %}     
+            {% for listing in object_list %}
+            <td>{{ listing.id}}</td>
+            <td><img width ='300' src="{{ listing.photo_main.url}}" alt='image'></td>
+            <td>{{ listing.title}}</td>
+            <td>{{ listing.reference}}</td>
+            <td>{{ listing.address}}</td>
+            <td>{{ listing.city}}</td>
+            <td>{{ listing.price}}€</td>
+            <td>{{ listing.mtrs}}</td>
+            <td>{{ listing.bedrooms }}</td>
+            <td>{{ listing.bathrooms }}</td>
+            <td>{{ listing.is_published }}</td>
+            <td>
+                <a class="btn btn-primary" href="{% url 'admin_listing' listing.id  %}">Ver Propiedad</a>
+            </td>
+            <td>
+                <a class="btn btn-primary" href="{% url 'update_form' listing.id  %}">Update</a>
+            </td>
+            <td>
+                <a class="btn btn-primary" href="">Borrar propiedad</a>
+            </td>
+            </tr>
+            {% endfor %}
+       {% endif %}
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+{% endblock %}

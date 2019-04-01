@@ -23,13 +23,11 @@ def index(request):
         'state_choices'   : state_choices,
         'bedroom_choices' : bedroom_choices,
         'price_choices'   : price_choices,
-
-
     }
     # return and render listing.html
     return render(request, 'listings/listings.html', context)
 
-# linsting view
+# listing view
 def listing(request, listing_id):
     listing = get_object_or_404(Listing, pk=listing_id)
  
@@ -57,3 +55,4 @@ def search(request):
         'listings'        : query_list
     }
     return render(request, 'listings/search.html', context)
+    
