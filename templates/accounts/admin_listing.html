@@ -21,15 +21,20 @@
           </nav>
         </div>
       </section>
-      
-
-
 
             <div class="modal-body">
                       <div class="form-group">
                         <label for="property_name" class="col-form-label">Property:</label>
                         <input type="text" name="listing" class="form-control" value="{{ listing.title }}">
                       </div>
+                      <div class="form-group">
+                          <label for="property_name" class="col-form-label">Ref:</label>
+                          <input type="text" name="listing" class="form-control" value="{{ listing.reference }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="property_name" class="col-form-label">Direccion:</label>
+                            <input type="text" name="listing" class="form-control" value="{{ listing.address }}">
+                          </div>
                         <div class="form-group">
                             <div class="row mb-5 thumbs">
                                     <div class="col-md-2">
@@ -58,7 +63,6 @@
                         <textarea name="message" class="form-control"></textarea>
                       </div>
                       <hr>
-                      <input type="submit" value="Send"  href="{% url 'update_form'  listing.id %}" class="btn btn-block btn-primary">
                     </form>
                   </div>
 </div>

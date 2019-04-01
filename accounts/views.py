@@ -90,6 +90,8 @@ class AdminListView(generic.ListView):
 class DetailListView(generic.DetailView):
      model = Listing
      template_name = 'accounts/admin_listing.html'
+     def get_queryset(self):
+          return Listing.objects.all()
 
 
 class ListingCreate(CreateView):
@@ -101,16 +103,18 @@ class ListingCreate(CreateView):
      #def success redirect
     #success_url = reverse_lazy('accounts/admin_listing.html')
 
-class ListingDelete(DeleteView):
-     model = Listing
-     #success_url = reverse_lazy('listing:index', pk= property_id)
-     #success_url = reverse_lazy('accounts/admin_listings.html')
 
 class ListingUpdate(UpdateView):
      model = Listing
      fields = [  'broker', 'reference', 'title', 'address', 'city', 'state', 'zipcode', 'description', 'price', 'bedrooms', 'bathrooms', 
      'garage', 'mtrs', 'lot_size', 'photo_main', 'photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6']
+     template_name = 'accounts/listing_form.html'
      
-     success_url = reverse_lazy('accounts/admin_listing.html')
      
+
+class ListingDelete(DeleteView):
+     model = Listing 
+     success_url = reverse_lazy('admin_listings')
+     #success_url = "/admin_listing/{listing.id}"
+
 

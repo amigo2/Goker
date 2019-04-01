@@ -62,10 +62,10 @@
                 <a class="btn btn-primary" href="{% url 'admin_listing' listing.id  %}">Ver Propiedad</a>
             </td>
             <td>
-                <a class="btn btn-primary" href="{% url 'update_form' listing.id  %}">Update</a>
+                <a class="btn btn-primary" href="{% url 'listing_form' listing.id  %}">Update</a>
             </td>
             <td>
-                <a class="btn btn-primary" href="">Borrar propiedad</a>
+                <a class="btn btn-primary" href="{% url 'delete_form' listing.id  %}">Borrar propiedad</a>
             </td>
             </tr>
             {% endfor %}
