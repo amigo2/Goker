@@ -5,6 +5,9 @@ from django.views import generic
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from listings.models import Listing
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+
 #from  . forms import listing_form
 
 
@@ -67,6 +70,8 @@ def logout(request):
       messages.success(request, 'Estas log out')
      return redirect( 'index')
 
+#login decorator
+@login_required(login_url="/login/")
 
 def dashboard(request):
 
@@ -75,12 +80,12 @@ def dashboard(request):
      contex={
 
           'listings' : listings
-
      }
 
      return render(request, 'accounts/dashboard.html', contex)
 
-
+# login decorator for class based view
+@method_decorator(login_required, name='dispatch')
 class AdminListView(generic.ListView):
      template_name = 'accounts/admin_listings.html'
      def get_queryset(self):
@@ -100,8 +105,6 @@ class ListingCreate(CreateView):
      'garage', 'mtrs', 'lot_size', 'photo_main', 'photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6']
      template_name = 'accounts/listing_form.html'
 
-     #def success redirect
-    #success_url = reverse_lazy('accounts/admin_listing.html')
 
 
 class ListingUpdate(UpdateView):
@@ -115,6 +118,6 @@ class ListingUpdate(UpdateView):
 class ListingDelete(DeleteView):
      model = Listing 
      success_url = reverse_lazy('admin_listings')
-     #success_url = "/admin_listing/{listing.id}"
+
 
 
