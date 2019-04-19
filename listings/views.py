@@ -13,7 +13,7 @@ def index(request):
 
     # pagination
     # max objevt per page
-    paginator = Paginator(listings,3)
+    paginator = Paginator(listings,15)
     page = request.GET.get('page')
     paged_listing = paginator.get_page(page)
 

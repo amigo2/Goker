@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
 #from  . forms import listing_form
+from django import forms
 
 
 
@@ -72,7 +73,6 @@ def logout(request):
 
 #login decorator
 @login_required(login_url="/login/")
-
 def dashboard(request):
 
      # gather all ojects in listings
@@ -91,14 +91,14 @@ class AdminListView(generic.ListView):
      def get_queryset(self):
           return Listing.objects.all()
 
-
+@method_decorator(login_required, name='dispatch')
 class DetailListView(generic.DetailView):
      model = Listing
      template_name = 'accounts/admin_listing.html'
      def get_queryset(self):
           return Listing.objects.all()
 
-
+@method_decorator(login_required, name='dispatch')
 class ListingCreate(CreateView):
      model = Listing
      fields = [  'broker', 'reference', 'title', 'address', 'city', 'state', 'zipcode', 'description', 'price', 'bedrooms', 'bathrooms', 
@@ -106,15 +106,20 @@ class ListingCreate(CreateView):
      template_name = 'accounts/listing_form.html'
 
 
-
+@method_decorator(login_required, name='dispatch')
 class ListingUpdate(UpdateView):
      model = Listing
      fields = [  'broker', 'reference', 'title', 'address', 'city', 'state', 'zipcode', 'description', 'price', 'bedrooms', 'bathrooms', 
      'garage', 'mtrs', 'lot_size', 'photo_main', 'photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6']
      template_name = 'accounts/listing_form.html'
-     
-     
 
+     widgets = {
+          #'title' = forms.TextInput(attrs={'class':'input'}),
+
+     }
+     
+     
+@method_decorator(login_required, name='dispatch')
 class ListingDelete(DeleteView):
      model = Listing 
      success_url = reverse_lazy('admin_listings')

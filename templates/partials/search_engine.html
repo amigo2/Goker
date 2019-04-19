@@ -1,0 +1,59 @@
+<!-- Showcase -->
+<section id="showcase">
+    <div class="container text-center">
+      <div class="home-search p-5">
+        <div class="overlay p-5">
+          <h1 class="display-4 mb-4">
+            Busca tu propiedad
+          </h1>
+          <div class="search">
+            <form action="{% url 'search' %}">
+              <!-- Form Row 1 -->
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Keywords</label>
+                  <input type="text" name="keywords" class="form-control" placeholder="Palabra clave ( Reformado, Garaje )">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">City</label>
+                  <input type="text" name="city" class="form-control" placeholder="Ciudad">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Provincia</label>
+                  <select name="state" class="form-control">
+                    <option selected="true" disabled="disabled">Provincias (Todas)</option>
+                     {% for key,value in state_choices.items %}
+                     <option value="{{ key }}">{{ value }}</option>             
+                     {% endfor  %}
+                  </select>
+                </div>
+              </div>
+              <!-- Form Row 2 -->
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label class="sr-only">Habitaciones</label>
+                  <select name="bedrooms" class="form-control">
+                    <option selected="true" disabled="disabled">Habitaciones (Todas)</option>
+                    {% for key, value in bedroom_choices.items %}
+                     <option value="{{ key }}">{{ value }}</option>             
+                    {% endfor  %}
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <select name="price" class="form-control" id="type">
+                    <option selected="true" disabled="disabled">Max Precio (Todas)</option>
+                    {% for key, value in price_choices.items %}
+                     <option value="{{ key }}">{{ value }}</option>             
+                    {% endfor  %}
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-block mt-4" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

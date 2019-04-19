@@ -26,27 +26,28 @@
 <!-- Dashboard -->
 <section id="dashboard" class="py-4">
         <div class="container">
-            <div class="row">
+          <div class="row">
             <div class="col-md-12">
                 <h2>Bienvenid@</h2>
+                <h6 class="text-secondary">{{ user.first_name }} {{ user.last_name }}</h6>
                 <p>Lista de propiedades</p>
-
-                  <div class="container" >
-                  <a class="btn btn-primary" href="{% url 'listing_form' %}">Crear nueva propiedad</a>
+                  <div class="text-right">
+                    <a class="btn btn-primary" href="{% url 'listing_form' %}">Crear nueva propiedad</a>
                   </div>
+              </div>
 
                 <table class="table">
                 <thead>
                     <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Imagen</th>
+                    <th scope="col">Imageeeeeeeeen</th>
                     <th scope="col">Título</th>
                     <th scope="col">Referencia</th>
                     <th scope="col">Dirección</th>  
                     <th scope="col">Población</th>                
-                    <th scope="col"> Precio </th>
+                    <th scope="col">Precio</th>
                     <th scope="col">Metros</th>
-                    <th scope="col">Dormitorios</th>
+                    <th scope="col">Dorm</th>
                     <th scope="col">Baños</th>
                     <th scope="col">Publicado</th>
                     <th></th>
@@ -57,7 +58,7 @@
         {% if object_list %}     
             {% for listing in object_list %}
             <td>{{ listing.id}}</td>
-            <td><img width ='300' src="{{ listing.photo_main.url}}" alt='image'></td>
+            <td><img width ='500' src="{{ listing.photo_main.url}}" alt='image'></td>
             <td>{{ listing.title}}</td>
             <td>{{ listing.reference}}</td>
             <td>{{ listing.address}}</td>
@@ -68,13 +69,13 @@
             <td>{{ listing.bathrooms }}</td>
             <td>{{ listing.is_published }}</td>
             <td>
-                <a class="btn btn-primary" href="{% url 'admin_listing' listing.id  %}">Ver Propiedad</a>
+              <a class="btn btn-primary" href="{% url 'admin_listing' listing.id  %}">Ver</a>
             </td>
             <td>
-                <a class="btn btn-primary" href="{% url 'listing_form' listing.id  %}">Update</a>
+                <a class="btn btn-primary" href="{% url 'listing_form' listing.id  %}">Actualizar</a>
             </td>
             <td>
-                <a class="btn btn-primary" href="{% url 'delete_form' listing.id  %}">Borrar propiedad</a>
+                <a class="btn btn-danger" href="{% url 'delete_form' listing.id  %}">Borrar</a>
             </td>
             </tr>
             {% endfor %}

@@ -2,12 +2,6 @@
 
 {%  block content %}
 
-
-<div class="form-group">
-    <label for="name" class="col-form-label">Name:</label>
-    <input type="text" name="name" class="form-control" {% if user.is_authenticated %} value="{{ user.first_name }} {{ user.last_name }}" {% endif %} required>
-  </div>
-
   <!-- Breadcrumb -->
   <section id="bc" class="mt-3">
     <div class="container">
@@ -32,10 +26,9 @@
                   <div class="row">
                     <div class="col-md-12">
                       <h2>Bienvenid@</h2>
-                      <p>Estas en tu Dash Board</p>
+                      <h6 class="text-secondary">{{ user.first_name }} {{ user.last_name }}</h6>
                       <a class="btn btn-primary" href="{% url 'admin_listings' %}">Admin Propiedades</a>
-                      <a class="btn btn-primary" href="{% url 'admin_listings' %}">Admin Brokers</a>
-                      <a class="btn btn-primary" href="{% url 'admin_listings' %}">Admin Users</a>
+
                       <table class="table"></table>
           {% else %}
           <p>You are not in the right place</p> 

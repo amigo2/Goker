@@ -3,8 +3,6 @@
 {% block content %}
 
 <div class="container">
-
-    
       <!-- Breadcrumb -->
       <section id="bc" class="mt-3">
         <div class="container">
@@ -14,54 +12,54 @@
                 <a href="{%  url 'index' %}">Home</a>
               </li>
               <li class="breadcrumb-item">
-                <a href="{%  url 'admin_listings' %}">Listado Admin</a>
+                <a href="{%  url 'admin_listings' %}">Lista Propiedades</a>
               </li>
               <li class="breadcrumb-item active">{{ listing.title }}</li>
             </ol>
           </nav>
         </div>
       </section>
-
             <div class="modal-body">
                       <div class="form-group">
-                        <label for="property_name" class="col-form-label">Property:</label>
-                        <input type="text" name="listing" class="form-control" value="{{ listing.title }}">
-                      </div>
-                      <div class="form-group">
-                          <label for="property_name" class="col-form-label">Ref:</label>
+                          <label for="property_reference" class="col-form-label">Referencia</label>
                           <input type="text" name="listing" class="form-control" value="{{ listing.reference }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="property_name" class="col-form-label">Direccion:</label>
-                            <input type="text" name="listing" class="form-control" value="{{ listing.address }}">
-                          </div>
-                        <div class="form-group">
-                            <div class="row mb-5 thumbs">
-                                    <div class="col-md-2">
-                                        <label for="property_name" class="col-form-label">Imagen Principal:</label>
-                                             <img src="{{ listing.photo_main.url }}" alt="" class="img-main img-fluid mb-3">
-                                        <input type="text" name="listing" class="form-control" value="{{ listing.photo_main }}">
-                                    </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="property_title" class="col-form-label">Titulo</label>
+                          <input type="text" name="listing" class="form-control" value="{{ listing.title }}">
+                      </div>
+                      <div class="form-group">
+                        <label for="property_address" class="col-form-label">Dirección</label>
+                        <input type="text" name="listing" class="form-control" value="{{ listing.address }}">
+                      </div>
+                      <div class="form-group">
+                          <label for="property_city" class="col-form-label">Ciudad</label>
+                          <input type="text" name="listing" class="form-control" value="{{ listing.city }}">
+                      </div>
+                      <div class="form-group">
+                          <label for="property_state" class="col-form-label">Provincia:</label>
+                          <input type="text" name="listing" class="form-control" value="{{ listing.state }}">
+                      </div>
+                      <div class="form-group">
+                          <label for="property_zipcode" class="col-form-label">Código Postal:</label>
+                          <input type="text" name="listing" class="form-control" value="{{ listing.zipcode }}">
+                      </div>
+                      <div class="form-group">
+                          <label for="property_state" class="col-form-label">Descripción:</label>
+                          <input type="text" name="listing" class="form-control" value="{{ listing.description }}">
+                      </div>
+                      <div class="form-group">
+                        <div class="row mb-5 thumbs">
+                            <div class="col-md-2">
+                              <label for="property_name" class="col-form-label">Imagen Principal:</label>
+                                      <img src="{{ listing.photo_main.url }}" alt="" width ='500' class="img-main img-fluid mb-3">
+                                <input type="text" name="listing" class="form-control" value="{{ listing.photo_main }}">
                             </div>
+                          </div>
                         </div>
 
 
-                      <div class="form-group">
-                        <label for="name" class="col-form-label">Name:</label>
-                        <input type="text" name="name" class="form-control" {% if user.is_authenticated %} value="{{ user.first_name }} {{ user.last_name }}" {% endif %} required>
-                      </div>
-                      <div class="form-group">
-                        <label for="email" class="col-form-label">Email:</label>
-                        <input type="email" name="email" class="form-control" {% if user.is_authenticated %} value="{{ user.email }}" {% endif %}  required>
-                      </div>
-                      <div class="form-group">
-                        <label for="phone" class="col-form-label">Phone:</label>
-                        <input type="text" name="phone" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <label for="message" class="col-form-label">Message:</label>
-                        <textarea name="message" class="form-control"></textarea>
-                      </div>
+
                       <hr>
                     </form>
                   </div>
