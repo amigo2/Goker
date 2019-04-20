@@ -40,7 +40,7 @@
                 <thead>
                     <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Imageeeeeeeeen</th>
+                    <th scope="col">Imagen.....</th>
                     <th scope="col">Título</th>
                     <th scope="col">Referencia</th>
                     <th scope="col">Dirección</th>  
@@ -58,7 +58,7 @@
         {% if object_list %}     
             {% for listing in object_list %}
             <td>{{ listing.id}}</td>
-            <td><img width ='500' src="{{ listing.photo_main.url}}" alt='image'></td>
+            <td><img width="500" src="{{ listing.photo_main.url}}" alt='image'></td>
             <td>{{ listing.title}}</td>
             <td>{{ listing.reference}}</td>
             <td>{{ listing.address}}</td>
