@@ -1,13 +1,13 @@
-from urllib.request import urlopen as uReq
-from bs4 import BeautifulSoup as soup
+#from urllib.request import urlopen as uReq
+###from bs4 import BeautifulSoup as soup
 
 
 
 
 #my_url = 'https://www.newegg.com/Video-Cards-Video-Devices/Category/ID-38?Tpk=graphic%20cards'
 #ideal_url = 'https://www.idealista.com/venta-viviendas/sevilla/macarena/parlamento-torneo/'
-foto_url = 'https://www.fotocasa.es/es/comprar/viviendas/sevilla-provincia/sevilla-capital-y-entorno/l?latitude=37.3928&longitude=-5.9858&combinedLocationIds=724,1,41,328,0,0,0,0,0'
-uClient = uReq(foto_url)
+#foto_url = 'https://www.fotocasa.es/es/comprar/viviendas/sevilla-provincia/sevilla-capital-y-entorno/l?latitude=37.3928&longitude=-5.9858&combinedLocationIds=724,1,41,328,0,0,0,0,0'
+'''uClient = uReq(foto_url)
 page_html = uClient.read()
 uClient.close()
 
@@ -42,7 +42,7 @@ for container in containers:
             print("rooms_feature: "        + rooms_feature)
             print("size_feature: "         + size_feature)
             print("description_property: " + description_property)
-            print("contact_property: "     + contact_property)
+            print("contact_property: "     + contact_property)'''
 
 
 
