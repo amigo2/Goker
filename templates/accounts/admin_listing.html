@@ -20,6 +20,9 @@
         </div>
       </section>
             <div class="modal-body">
+                      <hr>
+                      <h2> Datos de la Propiedad</h1>
+                      <hr>
                       <div class="form-group">
                           <label for="property_reference" class="col-form-label">Referencia</label>
                           <input type="text" name="listing" class="form-control" value="{{ listing.reference }}">
@@ -90,7 +93,7 @@
                                   <img src="{{ listing.photo_1.url }}" alt="" width ='500' class="img-main img-fluid mb-3">
                                   <input type="text" name="listing" class="form-control" value="{{ listing.photo_1 }}">
                                   {% else %}
-                                 <p> Ups, parece que no hay ninguna foto por aquí </p>
+                                 <p> Ups, parece que no hay ninguna archivo por aquí </p>
                                 </div>
                                 {% endif %}
                             </div>
@@ -103,7 +106,7 @@
                                   <img src="{{ listing.photo_2.url }}" alt="" width ='500' class="img-main img-fluid mb-3">
                                   <input type="text" name="listing" class="form-control" value="{{ listing.photo_2 }}">
                                   {% else %}
-                                  <p> Ups, parece que no hay ninguna foto por aquí </p>
+                                  <p> Ups, parece que no hay ninguna archivo por aquí </p>
                                 </div>
                                 {% endif %}
                             </div>
@@ -116,7 +119,7 @@
                                   <img src="{{ listing.photo_3.url }}" alt="" width ='500' class="img-main img-fluid mb-3">
                                   <input type="text" name="listing" class="form-control" value="{{ listing.photo_3 }}">
                                   {% else %}
-                                  <p> Ups, parece que no hay ninguna foto por aquí </p>
+                                  <p> Ups, parece que no hay ninguna archivo por aquí </p>
                                 </div>
                                 {% endif %}
                             </div>
@@ -129,7 +132,7 @@
                                   <img src="{{ listing.photo_4.url }}" alt="" width ='500' class="img-main img-fluid mb-3">
                                   <input type="text" name="listing" class="form-control" value="{{ listing.photo_4 }}">
                                   {% else %}
-                                  <p> Ups, parece que no hay ninguna foto por aquí </p>
+                                  <p> Ups, parece que no hay ninguna archivo por aquí </p>
                                 </div>
                                 {% endif %}
                             </div>
@@ -142,7 +145,7 @@
                                     <img src="{{ listing.photo_5.url }}" alt="" width ='500' class="img-main img-fluid mb-3">
                                     <input type="text" name="listing" class="form-control" value="{{ listing.photo_5 }}">
                                     {% else %}
-                                    <p> Ups, parece que no hay ninguna foto por aquí </p>
+                                    <p> Ups, parece que no hay ningun archivo por aquí </p>
                                   </div>
                                   {% endif %}
                               </div>
@@ -155,23 +158,85 @@
                                       <img src="{{ listing.photo_6.url }}" alt="" width ='500' class="img-main img-fluid mb-3">
                                       <input type="text" name="listing" class="form-control" value="{{ listing.photo_6 }}">
                                       {% else %}
-                                      <p> Ups, parece que no hay ninguna foto por aquí </p>
+                                      <p> Ups, parece que no hay ninguna archivo por aquí </p>
                                     </div>
                                     {% endif %}
                                 </div>
                               </div>
-                                  
-                    <div class="form-group">
-                        <label for="property_state" class="col-form-label">Públicado?:</label>
-                        <input type="text" name="listing" class="form-control" value="{{ listing.is_published }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="property_state" class="col-form-label">Fecha publicación:</label>
-                        <input type="text" name="listing" class="form-control" value="{{ listing.list_date }}">
-                    </div>
+                              <hr>
+                              <h2> Documentos de la propiedad</h1>
+                              <hr>
+                              <div class="form-group">
+                                <div class="row mb-5 thumbs">
+                                    <div class="col-md-6">
+                                        <label for="property_name" class="col-form-label">Contrato Firmado</label>
+                                        {% if listing.photo_6 %}
+                                        <img src="{{ listing.photo_6.url }}" alt="" width ='500' class="img-main img-fluid mb-3">
+                                        <input type="text" name="listing" class="form-control" value="{{ listing.photo_6 }}">
+                                        {% else %}
+                                        <p> Ups, parece que no hay ninguna archivo por aquí </p>
+                                      </div>
+                                      {% endif %}
+                                  </div>
+                                </div>
+                              <div class="form-group">
+                                <div class="row mb-5 thumbs">
+                                    <div class="col-md-6">
+                                        <label for="property_name" class="col-form-label">Certificado Energético</label>
+                                        {% if listing.photo_6 %}
+                                        <img src="{{ listing.photo_6.url }}" alt="" width ='500' class="img-main img-fluid mb-3">
+                                        <input type="text" name="listing" class="form-control" value="{{ listing.photo_6 }}">
+                                        {% else %}
+                                        <p> Ups, parece que no hay ninguna archivo por aquí </p>
+                                      </div>
+                                      {% endif %}
+                                  </div>
+                                </div>
+                              <hr>
+                              <h2> Datos de la Propiedad</h1>
+                              <hr>                              
+                              <div class="form-group">
+                                  <label for="property_state" class="col-form-label">Comisión pactada IVA Incluido:</label>
+                                  <input type="text" name="listing" class="form-control" value="{{ listing.lot_size }}">
+                              </div>    
+                              <hr>
+                              <h2> Documentos de la financiera</h1>
+                              <hr>
+                              <div class="form-group">
+                                <div class="row mb-5 thumbs">
+                                    <div class="col-md-6">
+                                          <label for="property_name" class="col-form-label">Nomina</label>
+                                          {% if listing.photo_6 %}
+                                          <img src="{{ listing.photo_6.url }}" alt="" width ='500' class="img-main img-fluid mb-3">
+                                          <input type="text" name="listing" class="form-control" value="{{ listing.photo_6 }}">
+                                          {% else %}
+                                          <p> Ups, parece que no hay ninguna archivo por aquí </p>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                  </div>
+                                <div class="form-group">
+                                    <div class="row mb-5 thumbs">
+                                          <div class="col-md-6">
+                                              <label for="property_name" class="col-form-label">Vida Laboral</label>
+                                              {% if listing.photo_6 %}
+                                              <img src="{{ listing.photo_6.url }}" alt="" width ='500' class="img-main img-fluid mb-3">
+                                              <input type="text" name="listing" class="form-control" value="{{ listing.photo_6 }}">
+                                              {% else %}
+                                              <p> Ups, parece que no hay ninguna archivo por aquí </p>
+                                            </div>
+                                            {% endif %}
+                                      </div>
+                                    </div>
 
-
-
+                              <div class="form-group">
+                                  <label for="property_state" class="col-form-label">Públicado? Solo Publicar cuando todos los campos requeridos estan rellenos:</label>
+                                  <input type="text" name="listing" class="form-control" value="{{ listing.is_published }}">
+                              </div>
+                              <div class="form-group">
+                                  <label for="property_state" class="col-form-label">Fecha publicación:</label>
+                                  <input type="text" name="listing" class="form-control" value="{{ listing.list_date }}">
+                              </div>
 
                       <hr>
                     </form>
