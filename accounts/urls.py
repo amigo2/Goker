@@ -2,10 +2,6 @@ from django.urls import path
 
 from . import views
 
-
-
-
-
 #Paths
 urlpatterns = [
 
@@ -33,7 +29,9 @@ urlpatterns = [
     # Upsate View
     path('listing_form/<int:pk>/', views.ListingUpdate.as_view(), name='listing_form'),
     
-    
     #path route, value to pass, function, 
     path('delete/<int:pk>/', views.ListingDelete.as_view(), name='delete_form'),
+
+    #Create Events 
+    path('admin_events', views.events, name='admin_events'),
 ]

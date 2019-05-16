@@ -69,7 +69,12 @@ def logout(request):
      if request.method == 'POST':
       auth.logout(request)
       messages.success(request, 'Estas log out')
-     return redirect( 'index')
+     return redirect('index')
+
+
+
+def events(request):
+     return render(request, 'accounts/admin_events.html')
 
 #login decorator
 @login_required(login_url="/login/")

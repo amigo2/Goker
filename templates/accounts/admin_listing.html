@@ -1,6 +1,16 @@
-{% extends "base.html" %}
+{% load static %}
 
-{% block content %}
+{%  block content %}
+
+<!-- Admin Header -->
+{% include 'accounts/admin_header.html' %}
+
+  <div id="wrapper">
+      <!-- Navigation -->
+      {% include 'accounts/admin_navigation.html' %}
+
+      <div id="page-wrapper">
+       <div class="container-fluid">
 
 <div class="container">
       <!-- Breadcrumb -->
