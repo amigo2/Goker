@@ -13,6 +13,8 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     # path to pages comtacst
     path('contacts/', include('contacts.urls')),
+    # path to pages comtacst
+    path('calendar/', include('calendar_api.urls')),
     # path to spyder
     #path('spyder/', include('spyder.urls')),
     # path to admin urls 

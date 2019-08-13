@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'brokers.apps.BrokersConfig',
     'accounts.apps.AccountsConfig',
     'contacts.apps.ContactsConfig',
+    'calendar_api.apps.CalendarApiConfig',
     #'spyder.apps.SpyderConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -54,7 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #my own middleware is blocking acces to sites admin
+    #my own middleware is blocking acces to sites admin on purpose
     'goker.middleware.LoginRequiredMiddleware',
 ]
 
